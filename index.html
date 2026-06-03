@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Live LED Control Panel — hover to activate your LEDs with an interactive web interface." />
+  <title>LED Controller</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ─── Fixed Navigation Bar ─── -->
+  <nav id="navbar" class="navbar">
+    <div class="navbar-inner">
+      <div class="navbar-brand">
+        <span class="brand-icon">💡</span>
+        <span class="brand-text">LED Controller</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about" id="nav-about" class="nav-link">About</a></li>
+        <li><a href="#how-it-works" id="nav-how" class="nav-link">How It Works</a></li>
+      </ul>
+      <div class="ws-status" id="ws-status">
+        <span class="ws-dot disconnected" id="ws-status-dot"></span>
+        <span class="ws-text disconnected" id="ws-status-text">Disconnected</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── Hero Section ─── -->
+  <header id="hero" class="hero">
+    <div class="hero-content">
+      <h1 class="hero-heading">Live LED Control Panel</h1>
+      <p class="hero-subheading">Hover to activate your LEDs</p>
+    </div>
+  </header>
+
+  <!-- ─── LED Circles Section ─── -->
+  <main id="led-panel" class="led-panel">
+    <div class="led-grid">
+
+      <div class="led-card" id="led-red" data-color="red">
+        <div class="led-circle-wrapper">
+          <div class="led-glow-ring"></div>
+          <div class="led-circle"></div>
+        </div>
+        <span class="led-label">Red</span>
+        <span class="led-status" id="status-red">OFF</span>
+      </div>
+
+      <div class="led-card" id="led-green" data-color="green">
+        <div class="led-circle-wrapper">
+          <div class="led-glow-ring"></div>
+          <div class="led-circle"></div>
+        </div>
+        <span class="led-label">Green</span>
+        <span class="led-status" id="status-green">OFF</span>
+      </div>
+
+      <div class="led-card" id="led-yellow" data-color="yellow">
+        <div class="led-circle-wrapper">
+          <div class="led-glow-ring"></div>
+          <div class="led-circle"></div>
+        </div>
+        <span class="led-label">Yellow</span>
+        <span class="led-status" id="status-yellow">OFF</span>
+      </div>
+
+      <div class="led-card" id="led-blue" data-color="blue">
+        <div class="led-circle-wrapper">
+          <div class="led-glow-ring"></div>
+          <div class="led-circle"></div>
+        </div>
+        <span class="led-label">Blue</span>
+        <span class="led-status" id="status-blue">OFF</span>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
